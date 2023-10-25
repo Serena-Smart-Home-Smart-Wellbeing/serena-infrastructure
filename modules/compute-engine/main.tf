@@ -29,8 +29,9 @@ resource "google_compute_instance" "image-uploader" {
 
   boot_disk {
     initialize_params {
-      size = 5
-      type = "pd-standard"
+      size  = 5
+      type  = "pd-standard"
+      image = "debian-cloud/debian-11"
     }
   }
 
