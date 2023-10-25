@@ -20,3 +20,8 @@ module "netowrk" {
   source     = "./modules/network"
   GCP_REGION = var.GCP_REGION
 }
+
+module "compute-engine" {
+  depends_on = [module.services, module.iam, module.cloud-storage, module.netowrk]
+  source     = "./modules/compute-engine"
+}
