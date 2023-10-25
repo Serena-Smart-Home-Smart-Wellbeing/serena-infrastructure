@@ -15,3 +15,8 @@ module "cloud-storage" {
   GCP_REGION = var.GCP_REGION
 }
 
+module "netowrk" {
+  depends_on = [module.services]
+  source     = "./modules/network"
+  GCP_REGION = var.GCP_REGION
+}
