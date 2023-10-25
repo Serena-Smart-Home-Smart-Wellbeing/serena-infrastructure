@@ -1,13 +1,13 @@
-resource "google_storage_bucket" "serena-shsw-dataset" {
-  name                        = "serena-shsw-dataset"
+resource "google_storage_bucket" "serena-shsw-datasets" {
+  name                        = "serena-shsw-datasets"
   location                    = var.GCP_REGION
   force_destroy               = true
   public_access_prevention    = "enforced"
   uniform_bucket_level_access = true
 }
 
-resource "google_storage_bucket_iam_binding" "serena-shsw-dataset-admins" {
-  bucket = google_storage_bucket.serena-shsw-dataset.name
+resource "google_storage_bucket_iam_binding" "serena-shsw-datasets-admins" {
+  bucket = google_storage_bucket.serena-shsw-datasets.name
   role   = "roles/storage.admin"
 
   members = [
@@ -16,8 +16,8 @@ resource "google_storage_bucket_iam_binding" "serena-shsw-dataset-admins" {
   ]
 }
 
-resource "google_storage_bucket_iam_binding" "serena-shsw-dataset-object-admins" {
-  bucket = google_storage_bucket.serena-shsw-dataset.name
+resource "google_storage_bucket_iam_binding" "serena-shsw-datasets-object-admins" {
+  bucket = google_storage_bucket.serena-shsw-datasets.name
   role   = "roles/storage.objectAdmin"
 
   members = [
