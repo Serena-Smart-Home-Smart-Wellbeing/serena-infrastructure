@@ -1,3 +1,8 @@
+import {
+  id = "serena-shsw-dataset"
+  to = google_storage_bucket.serena-shsw-dataset
+}
+
 resource "google_storage_bucket" "serena-shsw-dataset" {
   name                        = "serena-shsw-dataset"
   location                    = var.GCP_REGION

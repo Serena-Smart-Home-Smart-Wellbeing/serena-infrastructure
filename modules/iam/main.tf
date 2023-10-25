@@ -21,6 +21,11 @@ resource "google_project_iam_binding" "project-editors" {
   ]
 }
 
+import {
+  to = google_service_account.serena-tf
+  id = "113963267141707577517"
+}
+
 resource "google_service_account" "serena-tf" {
   account_id   = "serena-tf"
   display_name = "serena-tf"
