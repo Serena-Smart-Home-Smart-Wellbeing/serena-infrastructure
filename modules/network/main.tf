@@ -20,6 +20,6 @@ resource "google_compute_firewall" "serena-net-allow-ssh" {
   }
 
   source_ranges = [
-    "10.0.0.0/24"
+    "0.0.0.0/0"
   ]
 }
