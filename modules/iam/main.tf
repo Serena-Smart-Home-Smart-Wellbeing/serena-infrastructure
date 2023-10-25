@@ -1,3 +1,6 @@
+/* Insert project level iams & service accounts (SA) in this folder, 
+for each resource binding put them in their respective folders */
+
 resource "google_project_iam_binding" "project-owners" {
   project = var.GCP_PROJECT_ID
   role    = "roles/owner"
