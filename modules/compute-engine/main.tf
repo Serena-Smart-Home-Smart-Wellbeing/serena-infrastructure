@@ -28,7 +28,10 @@ resource "google_compute_instance" "image-uploader" {
   machine_type = "e2-standard-2"
 
   boot_disk {
-
+    initialize_params {
+      size = 5
+      type = "pd-standard"
+    }
   }
 
   network_interface {
