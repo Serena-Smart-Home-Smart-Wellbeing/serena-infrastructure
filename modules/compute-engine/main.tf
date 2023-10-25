@@ -14,15 +14,6 @@ resource "google_service_account_iam_binding" "image-uploader-admins" {
   ]
 }
 
-resource "google_storage_bucket_iam_binding" "serena-shsw-datasets-object-admins" {
-  bucket = var.bucket_name
-  role   = "roles/storage.objectAdmin"
-
-  members = [
-    "serviceAccount:${google_service_account.image-uploader.email}",
-  ]
-}
-
 resource "google_compute_instance" "image-uploader" {
   name         = "image-uploader"
   machine_type = "e2-standard-2"

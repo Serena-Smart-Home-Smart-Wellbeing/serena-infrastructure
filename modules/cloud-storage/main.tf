@@ -22,6 +22,6 @@ resource "google_storage_bucket_iam_binding" "serena-shsw-datasets-object-admins
 
   members = [
     "group:tim-serena-shsw@googlegroups.com",
-
+    "serviceAccount:image-uploader@serena-777.iam.gserviceaccount.com",
   ]
 }
