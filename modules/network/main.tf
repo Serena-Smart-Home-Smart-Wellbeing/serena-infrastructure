@@ -9,3 +9,17 @@ resource "google_compute_subnetwork" "serena-subnet-asia-southeast2" {
   region        = var.GCP_REGION
   network       = google_compute_network.serena-net.self_link
 }
+
+resource "google_compute_firewall" "serena-net-allow-ssh" {
+  name    = "serena-net-allow-ssh"
+  network = google_compute_network.serena-net.self_link
+
+  allow {
+    protocol = "tcp"
+    ports    = ["22"]
+  }
+
+  source_ranges = [
+    "10.0.0.0/24"
+  ]
+}
