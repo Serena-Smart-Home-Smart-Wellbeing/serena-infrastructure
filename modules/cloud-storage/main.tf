@@ -13,7 +13,6 @@ resource "google_storage_bucket_iam_binding" "serena-shsw-dataset-admins" {
   members = [
     "user:mreyhanapwsw@gmail.com",
     "user:c200bsy3485@bangkit.academy",
-    "serviceAccount:${google_service_account.serena-tf.email}",
   ]
 }
 
