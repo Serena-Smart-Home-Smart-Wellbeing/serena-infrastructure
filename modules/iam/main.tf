@@ -47,3 +47,28 @@ resource "google_service_account_iam_binding" "serena-tf-users" {
   ]
 }
 
+resource "google_service_account" "serena-notebook" {
+  account_id   = "serena-notebook"
+  display_name = "serena-notebook"
+  description  = "SA for Vertex AI Notebooks"
+}
+
+resource "google_service_account_iam_binding" "serena-notebook-admins" {
+  service_account_id = google_service_account.serena-notebook.name
+  role               = "roles/iam.serviceAccountAdmin"
+
+  members = [
+    "user:c200bsy3485@bangkit.academy",
+    "user:mreyhanapwsw@gmail.com"
+  ]
+}
+
+resource "google_service_account_iam_binding" "serena-notebook-users" {
+  service_account_id = google_service_account.serena-notebook.name
+  role               = "roles/iam.serviceAccountUser"
+
+  members = [
+    "user:c200bsy3485@bangkit.academy",
+    "user:mreyhanapwsw@gmail.com"
+  ]
+}
