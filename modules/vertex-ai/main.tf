@@ -1,39 +1,25 @@
-resource "google_notebooks_runtime" "emotion-detector-nb" {
-  name     = "emotion-detector-nb"
-  location = "asia-southeast1"
+resource "google_notebooks_instance" "emotion-detector-nb" {
+  name            = "emotion-detector-nb"
+  location        = "asia-southeast2"
+  machine_type    = "n1-standard-4"
+  service_account = var.emotion-detector-nb-sa-email
 
-  access_config {
-    access_type   = "SERVICE_ACCOUNT"
-    runtime_owner = var.emotion-detector-nb-sa-email
-  }
+  # Disk
+  boot_disk_type    = "PD_STANDARD"
+  boot_disk_size_gb = 50
+  data_disk_type    = "PD_STANDARD"
+  data_disk_size_gb = 50
 
-  virtual_machine {
-    virtual_machine_config {
-      machine_type = "n1-standard-8"
 
-      data_disk {
-        initialize_params {
-          disk_size_gb = "100"
-          disk_type    = "PD_STANDARD"
-        }
-      }
-
-      #   network = var.network
-    }
-
-  }
-
-  software_config {
-    idle_shutdown         = true
-    idle_shutdown_timeout = 30
-  }
-
+  # Networking
+  no_public_ip = false
+  network      = var.network
+  subnet       = var.subnet
 }
 
-resource "google_notebooks_runtime_iam_binding" "emotion-detector-nb-admins" {
-  runtime_name = google_notebooks_runtime.emotion-detector-nb.name
-  role         = "roles/notebooks.admin"
-  location     = "asia-southeast1"
+resource "google_notebooks_instance_iam_binding" "emotion-detector-nb-admins" {
+  instance_name = google_notebooks_instance.emotion-detector-nb.name
+  role          = "roles/notebooks.admin"
 
   members = [
     "serviceAccount:${var.emotion-detector-nb-sa-email}"
