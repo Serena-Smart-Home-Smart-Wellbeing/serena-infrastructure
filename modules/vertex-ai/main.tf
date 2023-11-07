@@ -1,6 +1,6 @@
 resource "google_notebooks_instance" "emotion-detector-nb" {
   name            = "emotion-detector-nb"
-  location        = "asia-southeast2"
+  location        = "asia-southeast2-a"
   machine_type    = "n1-standard-4"
   service_account = var.emotion-detector-nb-sa-email
 
