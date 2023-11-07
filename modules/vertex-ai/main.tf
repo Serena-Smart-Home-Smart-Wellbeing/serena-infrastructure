@@ -16,7 +16,7 @@ resource "google_notebooks_instance" "emotion-detector-nb" {
 
 
   # Networking
-  no_public_ip = false
+  no_public_ip = true
   network      = var.network
   subnet       = var.subnet
 }
