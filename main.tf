@@ -28,6 +28,7 @@ module "compute-engine" {
 }
 
 module "emotion-detector-nb" {
-  source          = "./modules/vertex-ai"
-  service_account = module.iam.serena-notebook-sa-email
+  source                       = "./modules/vertex-ai"
+  emotion-detector-nb-sa-email = module.iam.emotion-detector-nb-sa
+
 }

@@ -4,7 +4,7 @@ resource "google_notebooks_runtime" "emotion-detector-nb" {
 
   access_config {
     access_type   = "SERVICE_ACCOUNT"
-    runtime_owner = var.service_account
+    runtime_owner = var.emotion-detector-nb-sa-email
   }
 
   virtual_machine {
@@ -28,4 +28,13 @@ resource "google_notebooks_runtime" "emotion-detector-nb" {
     idle_shutdown_timeout = 30
   }
 
+}
+
+resource "google_notebooks_runtime_iam_binding" "emotion-detector-nb-admins" {
+  runtime_name = google_notebooks_runtime.emotion-detector-nb.name
+  role         = "roles/notebooks.admin"
+
+  members = [
+    "serviceAccount:${var.emotion-detector-nb-sa-email}"
+  ]
 }

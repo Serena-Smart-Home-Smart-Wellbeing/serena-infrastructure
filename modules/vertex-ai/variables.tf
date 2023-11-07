@@ -2,6 +2,6 @@
 
 # }
 
-variable "service_account" {
-
+variable "emotion-detector-nb-sa-email" {
+  type = string
 }
