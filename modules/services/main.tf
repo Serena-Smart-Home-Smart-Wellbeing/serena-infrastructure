@@ -3,6 +3,10 @@ variable "services" {
   default = [
     "cloudresourcemanager.googleapis.com",
     "iam.googleapis.com",
+    "compute.googleapis.com",
+    "aiplatform.googleapis.com",
+    "notebooks.googleapis.com",
+    "artifactregistry.googleapis.com",
     "compute.googleapis.com"
   ]
 }
