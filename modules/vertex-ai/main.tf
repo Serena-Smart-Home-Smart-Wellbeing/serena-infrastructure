@@ -24,6 +24,7 @@ resource "google_notebooks_instance" "emotion-detector-nb" {
 resource "google_notebooks_instance_iam_binding" "emotion-detector-nb-admins" {
   instance_name = google_notebooks_instance.emotion-detector-nb.name
   role          = "roles/notebooks.admin"
+  location      = "asia-southeast2-c"
 
   members = [
     "serviceAccount:${var.emotion-detector-nb-sa-email}"
