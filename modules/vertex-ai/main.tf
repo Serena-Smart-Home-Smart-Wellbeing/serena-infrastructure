@@ -9,6 +9,10 @@ resource "google_notebooks_instance" "emotion-detector-nb" {
   boot_disk_size_gb = 50
   data_disk_type    = "PD_STANDARD"
   data_disk_size_gb = 50
+  vm_image {
+    project      = "deeplearning-platform-release"
+    image_family = "tf-latest-cpu"
+  }
 
 
   # Networking
