@@ -1,6 +1,6 @@
 resource "google_notebooks_runtime" "emotion-detector-nb" {
   name     = "emotion-detector-nb"
-  location = "asia-southeast2"
+  location = "asia-southeast1"
 
   access_config {
     access_type   = "SERVICE_ACCOUNT"
