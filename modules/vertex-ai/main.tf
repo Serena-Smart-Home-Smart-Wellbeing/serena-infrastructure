@@ -33,6 +33,7 @@ resource "google_notebooks_runtime" "emotion-detector-nb" {
 resource "google_notebooks_runtime_iam_binding" "emotion-detector-nb-admins" {
   runtime_name = google_notebooks_runtime.emotion-detector-nb.name
   role         = "roles/notebooks.admin"
+  location     = "asia-southeast1"
 
   members = [
     "serviceAccount:${var.emotion-detector-nb-sa-email}"
