@@ -30,7 +30,7 @@ module "compute-engine" {
 module "emotion-detector-nb" {
   source                       = "./modules/vertex-ai"
   emotion-detector-nb-sa-email = module.iam.serena-notebook-sa-email
-  network                      = module.netowrk.serena-net.name
-  subnet                       = module.netowrk.serena-subnet-asia-southeast2.name
+  network                      = module.netowrk.serena-net
+  subnet                       = module.netowrk.serena-subnet-asia-southeast2
 
 }
