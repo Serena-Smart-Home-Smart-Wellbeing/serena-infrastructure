@@ -1,6 +1,6 @@
-variable "network" {
+# variable "network" {
 
-}
+# }
 
 variable "service_account" {
 

@@ -25,3 +25,8 @@ module "compute-engine" {
   depends_on = [module.services, module.iam, module.cloud-storage, module.netowrk]
   source     = "./modules/compute-engine"
 }
+
+module "emotion-detector-nb" {
+  source          = "./modules/vertex-ai"
+  service_account = module.iam.serena-notebook-sa-email
+}
