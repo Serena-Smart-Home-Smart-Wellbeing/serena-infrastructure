@@ -81,3 +81,12 @@ resource "google_service_account_iam_binding" "serena-notebook-users" {
     "user:mreyhanapwsw@gmail.com"
   ]
 }
+
+resource "google_project_iam_binding" "vertex-ai-admin" {
+  project = var.GCP_PROJECT_ID
+  role    = "roles/aiplatform.admin"
+
+  members = [
+    "serviceAccount:${google_service_account.serena-notebook.email}",
+  ]
+}
