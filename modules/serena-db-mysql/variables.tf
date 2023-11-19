@@ -14,6 +14,6 @@ variable "sql_user_1_password" {
   type = string
 }
 
-variable "project_id" {
-  type = string
-}
+# variable "project_id" {
+#   type = string
+# }

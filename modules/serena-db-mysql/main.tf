@@ -14,10 +14,9 @@ resource "google_sql_database_instance" "serena-main" {
     }
     disk_autoresize = true
     disk_size       = 10
-
     ip_configuration {
       ipv4_enabled                                  = true
-      private_network                               = "projects/${var.project_id}/global/networks/${var.vpc_name}"
+      private_network                               = var.vpc_name
       enable_private_path_for_google_cloud_services = true
 
       dynamic "authorized_networks" {

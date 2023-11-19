@@ -41,6 +41,5 @@ module "serena-db-mysql" {
   sql_user_1_name     = var.sql_user_1_name
   sql_user_1_password = var.sql_user_1_password
   region              = var.GCP_REGION
-  vpc_name            = module.netowrk.serena-net.name
-  project_id          = var.GCP_PROJECT_ID
+  vpc_name            = module.netowrk.serena-net.self_link
 }

@@ -2,7 +2,6 @@ output "serena-net" {
   value = {
     name      = google_compute_network.serena-net.name
     self_link = google_compute_network.serena-net.self_link
-    id        = google_compute_network.serena-net.id
   }
 }
 
