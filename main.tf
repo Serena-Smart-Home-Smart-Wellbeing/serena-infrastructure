@@ -36,12 +36,7 @@ module "emotion-detector-nb" {
 }
 
 module "serena-db-mysql" {
-  depends_on = [
-    module.services,
-    module.iam,
-    module.cloud-storage,
-    module.netowrk
-  ]
+  depends_on          = [module.services, ]
   source              = "./modules/serena-db-mysql"
   sql_user_1_name     = var.sql_user_1_name
   sql_user_1_password = var.sql_user_1_password
