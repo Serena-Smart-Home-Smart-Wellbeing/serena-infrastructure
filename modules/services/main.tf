@@ -7,7 +7,8 @@ variable "services" {
     "aiplatform.googleapis.com",
     "notebooks.googleapis.com",
     "artifactregistry.googleapis.com",
-    "compute.googleapis.com"
+    "compute.googleapis.com",
+    "sqladmin.googleapis.com"
   ]
 }
 
