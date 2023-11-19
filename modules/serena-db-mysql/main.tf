@@ -29,7 +29,7 @@ resource "google_sql_database_instance" "serena-main" {
             value : "0.0.0.0/0"
           }
         ]
-        iterator = "networks"
+        iterator = networks
 
         content {
           name  = networks.value.name
@@ -44,11 +44,11 @@ resource "google_sql_database_instance" "serena-main" {
 resource "google_sql_user" "sql_user_1" {
   name     = var.sql_user_1_name
   password = var.sql_user_1_password
-  instance = google_sql_database_instance.main.name
+  instance = google_sql_database_instance.serena-main.name
 }
 
 
 resource "google_sql_database" "serena_db" {
   name     = "serena_db"
-  instance = google_sql_database_instance.instance.name
+  instance = google_sql_database_instance.serena-main.name
 }
