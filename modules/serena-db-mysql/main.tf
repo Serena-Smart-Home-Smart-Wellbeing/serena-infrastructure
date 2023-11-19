@@ -3,10 +3,6 @@ resource "google_sql_database_instance" "serena-main" {
   database_version = "MYSQL_8_0"
   region           = var.region
 
-  replica_configuration {
-
-  }
-
   settings {
     # Second-generation instance tiers are based on the machine
     # type. See argument reference below.
