@@ -1,12 +1,8 @@
-variable "GCP_PROJECT_ID" {
+variable "region" {
   type = string
 }
 
-variable "GCP_REGION" {
-  type = string
-}
-
-variable "GCP_ZONE" {
+variable "vpc_name" {
   type = string
 }
 

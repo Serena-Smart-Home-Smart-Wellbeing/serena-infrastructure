@@ -34,3 +34,11 @@ module "emotion-detector-nb" {
   subnet                       = module.netowrk.serena-subnet-asia-southeast2.self_link
 
 }
+
+module "serena-db-mysql" {
+  source              = "./modules/serena-db-mysql"
+  sql_user_1_name     = var.sql_user_1_name
+  sql_user_1_password = var.sql_user_1_password
+  region              = var.GCP_REGION
+  vpc_name            = module.netowrk.serena-net.self_link
+}
