@@ -43,3 +43,10 @@ module "serena-db-mysql" {
   region              = var.GCP_REGION
   vpc_name            = module.netowrk.serena-net.self_link
 }
+
+module "secret-manager" {
+  depends_on              = [module.services, module.iam]
+  source                  = "./modules/secret-manager"
+  jwt-access-secret       = var.jwt-access-secret
+  serena-backend-sa-email = module.iam.serena-backend-sa-email
+}

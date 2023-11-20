@@ -17,3 +17,7 @@ variable "sql_user_1_name" {
 variable "sql_user_1_password" {
   type = string
 }
+
+variable "jwt-access-secret" {
+  type = string
+}
