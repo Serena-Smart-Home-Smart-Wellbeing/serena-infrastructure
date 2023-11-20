@@ -19,6 +19,6 @@ resource "google_service_account_iam_binding" "jwt-access-secret" {
   role               = "roles/secretmanager.secretAccessor"
 
   members = [
-    "serviceAccount:${google_service_account.serena-backend.email}",
+    "serviceAccount:${var.serena-backend-sa-email}",
   ]
 }
