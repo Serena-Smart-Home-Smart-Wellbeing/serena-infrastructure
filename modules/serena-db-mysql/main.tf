@@ -6,7 +6,7 @@ resource "google_sql_database_instance" "serena-main" {
   settings {
     # Second-generation instance tiers are based on the machine
     # type. See argument reference below.
-    tier              = "db-n1-standard-2"
+    tier              = "db-n1-standard-1"
     availability_type = "REGIONAL"
     backup_configuration {
       enabled            = true
