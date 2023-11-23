@@ -1,5 +1,5 @@
 variable "services" {
-  type = list(string)
+  type = set(string)
   default = [
     "cloudresourcemanager.googleapis.com",
     "iam.googleapis.com",
@@ -10,7 +10,10 @@ variable "services" {
     "compute.googleapis.com",
     "sqladmin.googleapis.com",
     "servicenetworking.googleapis.com",
-    "secretmanager.googleapis.com"
+    "secretmanager.googleapis.com",
+    "run.googleapis.com",
+    "cloudbuild.googleapis.com",
+    "containeranalysis.googleapis.com"
   ]
 }
 

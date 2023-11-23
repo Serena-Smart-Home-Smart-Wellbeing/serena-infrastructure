@@ -45,8 +45,9 @@ module "serena-db-mysql" {
 }
 
 module "secret-manager" {
-  depends_on              = [module.services, module.iam]
-  source                  = "./modules/secret-manager"
-  jwt-access-secret       = var.jwt-access-secret
-  serena-backend-sa-email = module.iam.serena-backend-sa-email
+  depends_on                 = [module.services, module.iam]
+  source                     = "./modules/secret-manager"
+  jwt-access-secret          = var.jwt-access-secret
+  serena-main-sql-connection = var.serena-main-sql-connection
+  serena-backend-sa-email    = module.iam.serena-backend-sa-email
 }

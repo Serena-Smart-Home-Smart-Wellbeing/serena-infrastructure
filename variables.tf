@@ -21,3 +21,7 @@ variable "sql_user_1_password" {
 variable "jwt-access-secret" {
   type = string
 }
+
+variable "serena-main-sql-connection" {
+  type = string
+}
