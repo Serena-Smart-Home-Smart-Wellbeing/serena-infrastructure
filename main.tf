@@ -53,7 +53,7 @@ module "secret-manager" {
 }
 
 import {
-  to = "module.artifact-registry.google_artifact_registry_repository.cloud-run-source-deploy"
+  to = module.artifact-registry.google_artifact_registry_repository.cloud-run-source-deploy
   id = "cloud-run-source-deploy"
 }
 
