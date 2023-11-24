@@ -67,3 +67,15 @@ module "artifact-registry" {
     "user:mreyhanapwsw@gmail.com"
   ]
 }
+
+import {
+  to = module.cloud-run.google_cloud_run_service.serena-backend
+  id = "${var.GCP_REGION}/serena-backend"
+}
+
+module "cloud-run" {
+  depends_on              = [module.services, module.iam, module.artifact-registry]
+  source                  = "./modules/cloud-run"
+  location                = var.GCP_REGION
+  serena-backend-sa-email = module.iam.serena-backend-sa-email
+}
