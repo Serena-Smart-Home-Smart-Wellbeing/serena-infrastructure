@@ -52,8 +52,18 @@ module "secret-manager" {
   serena-backend-sa-email    = module.iam.serena-backend-sa-email
 }
 
+import {
+  to = "module.artifact-registry.google_artifact_registry_repository.cloud-run-source-deploy"
+  id = "cloud-run-source-deploy"
+}
+
 module "artifact-registry" {
   depends_on = [module.services, module.iam]
   source     = "./modules/artifact-registry"
   location   = var.GCP_REGION
+  cloud-run-source-deploy-admins = [
+    module.iam.serena-cloud-build-sa-email,
+    "user:c200bsy3485@bangkit.academy",
+    "user:mreyhanapwsw@gmail.com"
+  ]
 }
