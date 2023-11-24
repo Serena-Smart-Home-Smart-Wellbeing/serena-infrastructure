@@ -51,3 +51,9 @@ module "secret-manager" {
   serena-main-sql-connection = var.serena-main-sql-connection
   serena-backend-sa-email    = module.iam.serena-backend-sa-email
 }
+
+module "artifact-registry" {
+  depends_on = [module.services, module.iam]
+  source     = "./modules/artifact-registry"
+  location   = var.GCP_REGION
+}
