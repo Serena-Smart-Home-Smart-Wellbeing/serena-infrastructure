@@ -80,14 +80,14 @@ module "cloud-run" {
   serena-backend-sa-email = module.iam.serena-backend-sa-email
 }
 
+import {
+  to = module.cloud-build.google_cloudbuild_trigger.serena-backend-github-trigger
+  id = "serena-backend-github-trigger"
+}
+
 module "cloud-build" {
   depends_on                  = [module.services, module.iam, module.cloud-run]
   source                      = "./modules/cloud-build"
   location                    = var.GCP_REGION
   serena-cloud-build-sa-email = module.iam.serena-cloud-build-sa-email
-}
-
-import {
-  to = module.cloud-build.google_cloudbuild_trigger.serena-backend-github-trigger
-  id = "projects/${var.GCP_PROJECT_ID}/locations/global/triggers/serena-backend-github-trigger"
 }
