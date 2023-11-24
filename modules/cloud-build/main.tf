@@ -6,7 +6,7 @@ resource "google_cloudbuild_trigger" "serena-backend-github-trigger" {
   # https://github.com/Serena-Smart-Home-Smart-Wellbeing/serena-infrastructure
   github {
     owner = "Serena-Smart-Home-Smart-Wellbeing"
-    name  = "serena-infrastructure"
+    name  = "serena-backend"
     push {
       branch = "^main$"
     }
