@@ -54,7 +54,7 @@ module "secret-manager" {
 
 import {
   to = module.artifact-registry.google_artifact_registry_repository.cloud-run-source-deploy
-  id = "cloud-run-source-deploy"
+  id = "projects/${var.GCP_PROJECT_ID}/locations/${var.GCP_REGION}/repositories/cloud-run-source-deploy"
 }
 
 module "artifact-registry" {
@@ -66,4 +66,28 @@ module "artifact-registry" {
     "user:c200bsy3485@bangkit.academy",
     "user:mreyhanapwsw@gmail.com"
   ]
+}
+
+import {
+  to = module.cloud-run.google_cloud_run_service.serena-backend
+  id = "locations/${var.GCP_REGION}/namespaces/${var.GCP_PROJECT_ID}/services/serena-backend"
+}
+
+module "cloud-run" {
+  depends_on              = [module.services, module.iam, module.artifact-registry]
+  source                  = "./modules/cloud-run"
+  location                = var.GCP_REGION
+  serena-backend-sa-email = module.iam.serena-backend-sa-email
+}
+
+module "cloud-build" {
+  depends_on                  = [module.services, module.iam, module.cloud-run]
+  source                      = "./modules/cloud-build"
+  location                    = var.GCP_REGION
+  serena-cloud-build-sa-email = module.iam.serena-cloud-build-sa-email
+}
+
+import {
+  to = module.cloud-build.google_cloudbuild_trigger.serena-backend-github-trigger
+  id = "projects/${var.GCP_PROJECT_ID}/locations/global/triggers/serena-backend-github-trigger"
 }
