@@ -86,7 +86,7 @@ module "cloud-build" {
   depends_on                  = [module.services, module.iam, module.cloud-run]
   source                      = "./modules/cloud-build"
   location                    = var.GCP_REGION
-  serena-cloud-build-sa-email = module.iam.serena-cloud-build-sa-email
+  serena-cloud-build-sa-email = "serena-tf@serena-777.iam.gserviceaccount.com"
 }
 
 import {
