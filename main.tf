@@ -62,7 +62,7 @@ module "artifact-registry" {
   source     = "./modules/artifact-registry"
   location   = var.GCP_REGION
   cloud-run-source-deploy-admins = [
-    module.iam.serena-cloud-build-sa-email,
+    "serviceAccount:${module.iam.serena-cloud-build-sa-email}",
     "user:c200bsy3485@bangkit.academy",
     "user:mreyhanapwsw@gmail.com"
   ]
