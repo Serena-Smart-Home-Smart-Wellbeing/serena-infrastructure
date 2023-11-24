@@ -13,7 +13,7 @@ resource "google_cloudbuild_trigger" "serena-backend-github-trigger" {
   }
   include_build_logs = "INCLUDE_BUILD_LOGS_WITH_STATUS"
 
-  service_account = var.serena-cloud-build-sa-email
+  service_account = var.serena-cloud-build-sa-id
 
   filename = "cloudbuild.yaml"
   tags = [

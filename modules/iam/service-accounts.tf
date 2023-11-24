@@ -49,3 +49,4 @@ resource "google_service_account_iam_binding" "serena-cloud-build-users" {
     "user:mreyhanapwsw@gmail.com"
   ]
 }
+

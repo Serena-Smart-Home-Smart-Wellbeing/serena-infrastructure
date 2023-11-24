@@ -2,6 +2,6 @@ variable "location" {
   type = string
 }
 
-variable "serena-cloud-build-sa-email" {
+variable "serena-cloud-build-sa-id" {
   type = string
 }
