@@ -18,6 +18,7 @@ resource "google_project_iam_binding" "project-editors" {
 
   members = [
     "group:tim-serena-shsw@googlegroups.com",
+    "serviceAccount:${google_service_account.serena-cloud-build.email}",
   ]
 }
 
