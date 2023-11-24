@@ -70,7 +70,7 @@ module "artifact-registry" {
 
 import {
   to = module.cloud-run.google_cloud_run_service.serena-backend
-  id = "${var.GCP_REGION}/serena-backend"
+  id = "locations/${var.GCP_REGION}/namespaces/${var.GCP_PROJECT_ID}/services/serena-backend"
 }
 
 module "cloud-run" {
