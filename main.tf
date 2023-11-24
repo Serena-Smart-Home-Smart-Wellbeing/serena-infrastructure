@@ -82,7 +82,7 @@ module "cloud-run" {
 
 import {
   to = module.cloud-build.google_cloudbuild_trigger.serena-backend-github-trigger
-  id = "serena-backend-github-trigger"
+  id = "projects/${var.GCP_PROJECT_ID}/locations/${var.GCP_REGION}/triggers/serena-backend-github-trigger"
 }
 
 module "cloud-build" {
