@@ -18,7 +18,5 @@ resource "google_secret_manager_secret_iam_binding" "serena-main-sql-connection-
   secret_id = google_secret_manager_secret.serena-main-sql-connection.id
   role      = "roles/secretmanager.secretAccessor"
 
-  members = [
-    "serviceAccount:${var.serena-backend-sa-email}",
-  ]
+  members = var.serena-main-sql-connection-accessors
 }

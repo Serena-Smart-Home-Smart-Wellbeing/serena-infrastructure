@@ -49,7 +49,11 @@ module "secret-manager" {
   source                     = "./modules/secret-manager"
   jwt-access-secret          = var.jwt-access-secret
   serena-main-sql-connection = var.serena-main-sql-connection
-  serena-backend-sa-email    = module.iam.serena-backend-sa-email
+  serena-main-sql-connection-accessors = [
+    "serviceAccount:${module.iam.serena-backend-sa-email}",
+    "serviceAccount:${module.iam.serena-cloud-build-sa-email}",
+  ]
+  serena-backend-sa-email = module.iam.serena-backend-sa-email
 }
 
 import {

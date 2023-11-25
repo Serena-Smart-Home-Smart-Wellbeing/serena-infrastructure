@@ -9,3 +9,8 @@ variable "serena-main-sql-connection" {
 variable "serena-backend-sa-email" {
   type = string
 }
+
+variable "serena-main-sql-connection-accessors" {
+  type = set(string)
+
+}
