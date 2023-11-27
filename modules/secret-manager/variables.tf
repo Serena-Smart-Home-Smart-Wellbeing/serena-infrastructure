@@ -18,6 +18,10 @@ variable "spotify-api-accessors" {
   type = set(string)
 }
 
+variable "jwt-access-secret-accessors" {
+  type = set(string)
+}
+
 variable "spotify-client-id" {
   type = string
 }
