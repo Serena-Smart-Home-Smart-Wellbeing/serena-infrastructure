@@ -25,3 +25,11 @@ variable "jwt-access-secret" {
 variable "serena-main-sql-connection" {
   type = string
 }
+
+variable "spotify-client-id" {
+  type = string
+}
+
+variable "spotify-client-secret" {
+  type = string
+}

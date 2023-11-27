@@ -54,6 +54,12 @@ module "secret-manager" {
     "serviceAccount:${module.iam.serena-cloud-build-sa-email}",
   ]
   serena-backend-sa-email = module.iam.serena-backend-sa-email
+  spotify-api-accessors = [
+    "serviceAccount:${module.iam.serena-backend-sa-email}",
+    "serviceAccount:${module.iam.serena-cloud-build-sa-email}",
+  ]
+  spotify-client-id     = var.spotify-client-id
+  spotify-client-secret = var.spotify-client-secret
 }
 
 import {
