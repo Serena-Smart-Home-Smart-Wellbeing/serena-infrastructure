@@ -5,3 +5,7 @@ variable "GCP_REGION" {
 variable "serena-notebook-sa-email" {
   type = string
 }
+
+variable "serena-backend-sa-email" {
+  type = string
+}

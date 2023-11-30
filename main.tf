@@ -14,6 +14,7 @@ module "cloud-storage" {
   source                   = "./modules/cloud-storage"
   GCP_REGION               = var.GCP_REGION
   serena-notebook-sa-email = module.iam.serena-notebook-sa-email
+  serena-backend-sa-email  = module.iam.serena-backend-sa-email
 }
 
 module "netowrk" {
