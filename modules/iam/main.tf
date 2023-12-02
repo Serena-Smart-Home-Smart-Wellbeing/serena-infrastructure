@@ -22,6 +22,7 @@ resource "google_project_iam_binding" "project-editors" {
   ]
 }
 
+
 resource "google_project_iam_binding" "bucket-admins" {
   project = var.GCP_PROJECT_ID
   role    = "roles/storage.admin"
