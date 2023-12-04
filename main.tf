@@ -83,11 +83,6 @@ module "artifact-registry" {
   ]
 }
 
-import {
-  to = module.cloud-run.google_cloud_run_service.serena-backend
-  id = "locations/${var.GCP_REGION}/namespaces/${var.GCP_PROJECT_ID}/services/serena-backend"
-}
-
 module "cloud-run" {
   depends_on              = [module.services, module.iam, module.artifact-registry]
   source                  = "./modules/cloud-run"
