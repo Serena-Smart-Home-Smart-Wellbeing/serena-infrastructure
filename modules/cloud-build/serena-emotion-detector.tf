@@ -1,6 +1,6 @@
 resource "google_cloudbuild_trigger" "serena-emotion-detector-github-trigger" {
   name        = "serena-emotion-detector-github-trigger"
-  location    = "global"
+  location    = var.location
   description = "Build and deploy to Cloud Run service serena-emotion-detector on push to \"^main$\""
 
   github {

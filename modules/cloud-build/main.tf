@@ -1,6 +1,6 @@
 resource "google_cloudbuild_trigger" "serena-backend-github-trigger" {
   name        = "serena-backend-github-trigger"
-  location    = "global"
+  location    = var.location
   description = "Build and deploy to Cloud Run service serena-backend on push to \"^main$\""
 
   # https= github.com/Serena-Smart-Home-Smart-Wellbeing/serena-infrastructure
