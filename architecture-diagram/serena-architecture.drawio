@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-05T17:31:18.193Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="ypa77kCvEX6Xs7Vf8Wew" version="22.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-06T08:56:51.752Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="-EqK_pzh5zOPEHoUIT6S" version="22.1.5" type="github" pages="2">
   <diagram name="High-Level" id="4qVq3lAHbVwpSTwTRf0C">
-    <mxGraphModel dx="1509" dy="796" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2607" dy="1375" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="Zones &amp; Groups" parent="0" />
@@ -283,6 +283,14 @@
             <mxPoint x="15" y="16" as="offset" />
           </mxGeometry>
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Iqujf5WbwS2iwF231LZn" name="SerenBox">
+    <mxGraphModel dx="1434" dy="756" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
