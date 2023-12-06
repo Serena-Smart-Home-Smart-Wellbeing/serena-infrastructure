@@ -1,12 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2023-12-06T14:30:09.716Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="W9PSxb8jpDwqaAdV7iU0" version="22.1.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-12-06T14:36:36.889Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="lOrH00OUOGEMNA_3SXBR" version="22.1.5" type="github" pages="2">
   <diagram name="CC" id="4qVq3lAHbVwpSTwTRf0C">
-    <mxGraphModel dx="1434" dy="756" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="756" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="Zones &amp; Groups" parent="0" />
         <mxCell id="WSzood47Vc_Mqq_J4dC--15" value="Resources" parent="0" />
         <mxCell id="t-6qkIKzzWNXST8JXlIq-236" value="" style="group" vertex="1" connectable="0" parent="WSzood47Vc_Mqq_J4dC--15">
-          <mxGeometry x="37" y="43" width="1126" height="715" as="geometry" />
+          <mxGeometry x="237" y="93" width="1126" height="715" as="geometry" />
         </mxCell>
         <mxCell id="WSzood47Vc_Mqq_J4dC--14" value="&lt;font color=&quot;#9e9e9e&quot;&gt;Managed using Terraform Cloud Version Control Workflow: serena-infrastructure&lt;/font&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[1,1,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];rounded=1;absoluteArcSize=1;arcSize=2;html=1;strokeColor=none;shadow=0;dashed=0;fontSize=12;align=left;verticalAlign=top;spacing=10;spacingTop=-4;whiteSpace=wrap;fillColor=#e1d5e7;glass=0;container=0;" vertex="1" parent="t-6qkIKzzWNXST8JXlIq-236">
           <mxGeometry x="177" width="868" height="558" as="geometry">
