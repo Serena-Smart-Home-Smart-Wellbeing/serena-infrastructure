@@ -6,7 +6,7 @@ resource "google_notebooks_instance" "emotion-detector-nb" {
 
   # Disk
   boot_disk_type    = "PD_STANDARD"
-  boot_disk_size_gb = 10
+  boot_disk_size_gb = 50
   data_disk_type    = "PD_STANDARD"
   data_disk_size_gb = 10
   vm_image {
