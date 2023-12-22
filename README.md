@@ -9,8 +9,8 @@
 ## Background
 
 We require multiple services to realize our project. Therefore, we chose Google Cloud Platform for our Cloud Computing platform since it provides the necessary features.
-Since there will be many services for us to manage, we decide to use Terraform Cloud as it will be easy for us to provision, manage, replicate, and automate our infrastructure.
-We've setup our Terraform Cloud VCS-driven workflow so that whenever we push to `main` branch, it's going to deploy on GCP.
+Since there will be many services for us to manage, we decided to use Terraform Cloud as it will be easy for us to provision, manage, replicate, and automate our infrastructure.
+We've set up our Terraform Cloud VCS-driven workflow so that whenever we push to `main` branch, it's going to deploy on GCP.
 
 ## Architecture
 
@@ -28,14 +28,14 @@ We utilize Vertex AI user-managed notebook, training, and model registry to help
 
 ## Replication
 
-Replicating our Terraform code would be difficult as we have setup our Terraform Cloud VCS-driven workflow with our own sensitive secrets and configurations.
+Replicating our Terraform code would be difficult as we have set up our Terraform Cloud VCS-driven workflow with our own sensitive secrets and configurations.
 However, here are some steps that you can follow to replicate our project:
 
-1. Setup your [Terraform Cloud VCS-driven workflow](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjutNDf3qCDAxXQg2MGHbJKCVIQFnoECA8QAQ&url=https%3A%2F%2Fdeveloper.hashicorp.com%2Fterraform%2Ftutorials%2Fcloud-get-started%2Fcloud-vcs-change&usg=AOvVaw17FiA00kFb3_wx55tloPQx&opi=89978449)
+1. set up your [Terraform Cloud VCS-driven workflow](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjutNDf3qCDAxXQg2MGHbJKCVIQFnoECA8QAQ&url=https%3A%2F%2Fdeveloper.hashicorp.com%2Fterraform%2Ftutorials%2Fcloud-get-started%2Fcloud-vcs-change&usg=AOvVaw17FiA00kFb3_wx55tloPQx&opi=89978449)
 2. Create your GCP project and create a service account with Owner role to be used by Terraform Cloud
 3. Download its JSON key and save it as `GOOGLE_CREDENTIALS` environment variable in your Terraform Cloud workspace
 4. See the root files and adjust the values for your own configurations (e.g. in `providers.tf` change to your GCP project ID, region, and zone)
-5. Setup your IAM in the [iam](./modules/iam) folder
+5. set up your IAM in the [iam](./modules/iam) folder
 6. Look at our other modules and adjust the values for your own configurations
 
 If you want to just use our APIs, it would be easier to use our public APIs that is documented at [https://serena-backend-2g6tjw7nja-et.a.run.app/api-docs/](https://serena-backend-2g6tjw7nja-et.a.run.app/api-docs/)
@@ -44,4 +44,4 @@ If you want to just use our APIs, it would be easier to use our public APIs that
 
 | Name                                | Student ID       | Contribution                                                                                                               |
 | ----------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Muhammad Reyhan Ardiya Putra Wijaya | (CC) C200BSY3485 | Designed GCP architecture. Setup Terraform Cloud. Wrote Terraform code. Monitor and adjust deployed GCP project as needed. |
+| Muhammad Reyhan Ardiya Putra Wijaya | (CC) C200BSY3485 | Designed GCP architecture. set up Terraform Cloud. Wrote Terraform code. Monitor and adjust deployed GCP services as needed. |
