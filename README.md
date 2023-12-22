@@ -17,7 +17,7 @@ We've setup our Terraform Cloud VCS-driven workflow so that whenever we push to 
 ![Serena Architecture diagram](architecture-diagram/serena-architecture.png)
 
 Our project is protected using IAM and service accounts, where we try to apply the principle of least privilege.
-We store our secrets in Secret Manager that is protected by IAM as well.  
+We store our secrets in Secret Manager that is protected by IAM as well.
 
 We prioritize setting up our services in asia-southeast2 (Jakarta) region as it is the closest region to our target users. Therefore, we created a subnet in the `serena-net` VPC.
 
@@ -42,6 +42,6 @@ If you want to just use our APIs, it would be easier to use our public APIs that
 
 ## Members Contributions
 
-|              Name              |    Student ID    |                                                                                                                  Contribution                                                                                                                  |
-|:------------------------------:|:----------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|      Muhammad Reyhan Ardiya Putra Wijaya      | (CC) C200BSY3485 | Designed GCP architecture. Setup Terraform Cloud. Wrote Terraform code. Monitor and adjust deployed GCP project as needed. |
+| Name                                | Student ID       | Contribution                                                                                                               |
+| ----------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Muhammad Reyhan Ardiya Putra Wijaya | (CC) C200BSY3485 | Designed GCP architecture. Setup Terraform Cloud. Wrote Terraform code. Monitor and adjust deployed GCP project as needed. |
